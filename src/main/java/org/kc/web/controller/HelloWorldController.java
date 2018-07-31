@@ -23,5 +23,9 @@ public class HelloWorldController {
 		return "index";		
 	}
 	
-
+	@RequestMapping(path= {"/admin/page"},method=RequestMethod.GET)
+   public String sayHelloByAdmin(Model model) {
+	   model.addAttribute("message","Hello Spring MVC by admin");
+	   return "secured_page";	   
+   }
 }
